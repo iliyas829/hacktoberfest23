@@ -1,0 +1,48 @@
+public class StringOperationsExample {
+    public static void main(String[] args) {
+        // Concatenation
+        String str1 = "Hello";
+        String str2 = "World";
+        String result = str1 + " " + str2; // Using +
+        // or
+        String resultConcat = str1.concat(" ").concat(str2); // Using concat()
+        System.out.println("Concatenation: " + result); // Output: "Hello World"
+        System.out.println("Concatenation with concat(): " + resultConcat); // Output: "Hello World"
+
+        // Length
+        String text = "This is a sample string";
+        int length = text.length();
+        System.out.println("Length: " + length); // Output: "Length: 23"
+
+        // Substring
+        String sub = text.substring(7); // Start from index 7 (inclusive)
+        System.out.println("Substring: " + sub); // Output: "Substring: a sample string"
+
+        String sub2 = text.substring(0, 5); // Start from index 0 (inclusive) to index 5 (exclusive)
+        System.out.println("Substring 2: " + sub2); // Output: "Substring 2: This "
+
+        // Split
+        String fruitsText = "apple,banana,cherry";
+        String[] fruits = fruitsText.split(",");
+        System.out.println("Split:");
+        for (String fruit : fruits) {
+            System.out.println(fruit);
+        }
+        // Output:
+        // "apple"
+        // "banana"
+        // "cherry"
+
+        // Replace
+        String replaceText = "Hello, World!";
+        String modified = replaceText.replace("World", "Java");
+        System.out.println("Replace: " + modified); // Output: "Replace: Hello, Java!"
+
+        // Convert to Uppercase/Lowercase
+        String caseText = "Hello, World!";
+        String upper = caseText.toUpperCase();
+        String lower = caseText.toLowerCase();
+        System.out.println("Uppercase: " + upper); // Output: "Uppercase: HELLO, WORLD!"
+        System.out.println("Lowercase: " + lower); // Output: "Lowercase: hello, world!"
+    }
+}

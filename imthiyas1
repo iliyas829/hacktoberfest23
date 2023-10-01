@@ -1,0 +1,74 @@
+public class BinaryOperations {
+
+    // Function to add two binary numbers represented as strings
+    public static String addBinary(String a, String b) {
+        StringBuilder result = new StringBuilder();
+        int carry = 0;
+
+        int i = a.length() - 1;
+        int j = b.length() - 1;
+
+        while (i >= 0 || j >= 0) {
+            int sum = carry;
+            if (i >= 0) {
+                sum += a.charAt(i) - '0';
+                i--;
+            }
+            if (j >= 0) {
+                sum += b.charAt(j) - '0';
+                j--;
+            }
+
+            result.insert(0, sum % 2);
+            carry = sum / 2;
+        }
+
+        if (carry > 0) {
+            result.insert(0, carry);
+        }
+
+        return result.toString();
+    }
+
+    // Function to subtract two binary numbers represented as strings
+    public static String subtractBinary(String a, String b) {
+        // You can implement binary subtraction here
+        // This is just a placeholder
+        return "To be implemented";
+    }
+
+    // Function to multiply two binary numbers represented as strings
+    public static String multiplyBinary(String a, String b) {
+        // You can implement binary multiplication here
+        // This is just a placeholder
+        return "To be implemented";
+    }
+
+    // Function to divide two binary numbers represented as strings
+    public static String divideBinary(String a, String b) {
+        // You can implement binary division here
+        // This is just a placeholder
+        return "To be implemented";
+    }
+
+    public static void main(String[] args) {
+        String binary1 = "1101";
+        String binary2 = "101";
+
+        // Addition
+        String sum = addBinary(binary1, binary2);
+        System.out.println("Sum: " + sum);
+
+        // Subtraction (Not implemented in this example)
+        String difference = subtractBinary(binary1, binary2);
+        System.out.println("Difference: " + difference);
+
+        // Multiplication (Not implemented in this example)
+        String product = multiplyBinary(binary1, binary2);
+        System.out.println("Product: " + product);
+
+        // Division (Not implemented in this example)
+        String quotient = divideBinary(binary1, binary2);
+        System.out.println("Quotient: " + quotient);
+    }
+}

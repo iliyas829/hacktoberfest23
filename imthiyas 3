@@ -1,0 +1,43 @@
+public class EquationAndFormula {
+    public static void main(String[] args) {
+        // Addition
+        int sum = 5 + 3;
+        System.out.println("5 + 3 = " + sum);
+
+        // Subtraction
+        int difference = 10 - 4;
+        System.out.println("10 - 4 = " + difference);
+
+        // Multiplication
+        int product = 6 * 7;
+        System.out.println("6 * 7 = " + product);
+
+        // Division (integer division)
+        int quotient = 15 / 4;
+        System.out.println("15 / 4 = " + quotient);
+
+        // Division (floating-point division)
+        double divisionResult = 15.0 / 4.0;
+        System.out.println("15.0 / 4.0 = " + divisionResult);
+
+        // Modulus (remainder)
+        int remainder = 15 % 4;
+        System.out.println("15 % 4 = " + remainder);
+
+        // Square root
+        double number = 25.0;
+        double sqrtResult = Math.sqrt(number);
+        System.out.println("Square root of " + number + " = " + sqrtResult);
+
+        // Area of a circle
+        double radius = 5.0;
+        double area = Math.PI * Math.pow(radius, 2);
+        System.out.println("Area of a circle with radius " + radius + " = " + area);
+
+        // Pythagorean theorem
+        double sideA = 3.0;
+        double sideB = 4.0;
+        double hypotenuse = Math.sqrt(Math.pow(sideA, 2) + Math.pow(sideB, 2));
+        System.out.println("Hypotenuse using Pythagorean theorem = " + hypotenuse);
+    }
+}
